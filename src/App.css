@@ -1,0 +1,393 @@
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  background: linear-gradient(90deg white beige)
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: turquoise;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 4rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  width: 100%;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 0.8rem;
+  margin: 2rem 2rem;
+  padding: 2rem 0;
+  min-width: 50%;
+}
+
+fieldset {
+  border: none;
+  padding: 0.4rem 1rem;
+  height: 2.5rem;
+  max-width: 100%;
+}
+
+label {
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.2rem;
+}
+
+div {
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color;
+}
+
+/* Button styles */
+
+button {
+  background-color: turquoise;
+  color: black;
+  border: none;
+  padding: 0.3rem 1.5rem;
+  margin: 0.2rem 0.2rem 0.2rem 0.8rem;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  transition: transform ease-in-out 0.1s;
+  display: flex;
+  cursor: pointer;
+}
+
+/* button:not([type="range"]):hover, button:not([class*="accordion"]) {
+  transform: scale(1.05);
+} */
+
+.button-group {
+  display: flex;
+  justify-content: center;
+}
+
+.button-group label {
+  margin: 0.5rem 2rem;
+}
+
+button span {
+  margin-right: 0.4rem;
+}
+
+/* --- */
+
+h1, h2, h3, h4 {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+input {
+  border: #0d3b66 transparent 0.2rem;
+  transition-property: border, background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  box-sizing: border-box;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  flex: 50%;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border: black solid 1px;
+  border-radius: 50%; 
+  background: turquoise;
+  cursor: pointer;
+}
+
+input:focus {
+  border: #0d3b66 solid 0.2rem;
+  background-color: #faf0ca;
+}
+
+footer {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+  margin: 1rem auto;
+}
+
+th, td {
+  border: 1px solid #0d3b66;
+  padding: 0.1rem;
+}
+
+tr {
+  transition: background-color ease-in-out 0.2s;
+}
+
+tr:hover {
+  background-color: #faf0ca;
+  color: #0d3b66;
+}
+
+caption:nth-of-type(1) {
+  margin-top: 0.5rem;
+}
+
+caption:nth-of-type(3) {
+  margin-bottom: 1rem;
+}
+
+fieldset label {
+  text-align: left;
+  flex: 50%;
+}
+
+fieldset input {
+  flex: 20%;
+  height: 2rem;
+}
+
+select {
+  padding: 0.5rem 1rem;
+}
+
+option {
+  margin: 1rem 1rem;
+  border-radius: 0rem;
+}
+
+.outlet-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.large-application-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.large-application-form fieldset {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  flex: 30%;
+  height: 3rem;
+}
+
+.medium-application-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.medium-application-form fieldset {
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+}
+
+.medium-application-form label {
+  margin: 0.5rem 1rem;
+}
+
+.small-application-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.small-application-form fieldset {
+  max-width: 100%;
+}
+
+/* Dropdown menu */
+
+.nav-title {
+  margin-left: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav-title img {
+  margin-right: 1rem;
+  max-width: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.nav-button {
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  padding: 0.4rem 1rem;
+}
+
+.dropdown-menu {
+  transition: opacity 0.2s ease-in-out;
+  position: absolute;
+  flex-direction: column;
+  border: black solid 2px;
+  border-radius: 0.4rem;
+  z-index: 10;
+  width: 18rem;
+  max-width: 50%;
+  height: auto;
+  margin: 0 0.1rem 0 0.5rem;
+  padding: 0.3rem 0.3rem;
+  background-color: white;
+  top: 4rem;
+  right: 1rem;
+}
+
+.dropdown-menu a {
+  display: inline-block;
+  text-align: left;
+  max-width: 100%;
+  margin: 0.3rem 0.3rem 0.3rem 1rem;
+  padding: 0.1rem 0.5rem;
+}
+
+a {
+  transition: color 200ms;
+}
+
+a:hover {
+  color: turquoise;
+}
+
+.readme-container {
+  text-align: left;
+}
+
+/* Dark mode class */
+
+.dark-mode-div {
+  display: flex;
+  align-items: center;
+}
+
+.dark-mode {
+  background-color: #282828;
+  color: whitesmoke;
+}
+
+
+/* Accordion styles */
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  height: 4rem;
+  text-align: left;
+  border: none;
+  outline: none;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: whitesmoke;
+  color: black;
+  display: block;
+  overflow: hidden;
+  text-align: justify;
+  transition: 0.4s;
+}

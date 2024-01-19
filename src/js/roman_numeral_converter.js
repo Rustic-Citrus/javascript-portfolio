@@ -1,4 +1,4 @@
-function convertToRoman(num) {
+const convertToRoman = (num) => {
     const romanNumerals = {
         1000: "M",
         900: "CM",
@@ -34,4 +34,4 @@ function convertToRoman(num) {
     return romanNumeral;
 }
 
-console.log(convertToRoman(36)); // "XXXVI"
+export default convertToRoman;

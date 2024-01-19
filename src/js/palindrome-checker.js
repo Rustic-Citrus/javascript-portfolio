@@ -14,7 +14,5 @@ function palindrome(str) {
 
     return true;
 }
-  
-// console.log(palindrome("eye"));
-// console.log(palindrome("_eye"));
-// console.log(palindrome("A man, a plan, a canal. Panama"));
+
+export default palindrome;
